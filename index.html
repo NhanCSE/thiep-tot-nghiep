@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Thiệp mời lễ tốt nghiệp · Trần Thế Nhân</title>
+  <style>
+    @font-face {
+      font-family: "Source Serif 4";
+      src: url("assets/fonts/SourceSerif4-Semibold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Be Vietnam Pro";
+      src: url("assets/fonts/BeVietnamPro-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Be Vietnam Pro";
+      src: url("assets/fonts/BeVietnamPro-SemiBold.ttf") format("truetype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --navy-deep: #071d31;
+      --navy-bar: #0b2640;
+      --navy-border: #1b4267;
+      --ink: #123866;
+      --ink-dark: #0c1822;
+      --ink-muted: #35536e;
+      --blue: #16558e;
+      --blue-hover: #0e4373;
+      --ice: #d2ecff;
+      --ice-pill: #d5e8f7;
+      --paper: #fffdf6;
+      --paper-tint: #eef5fb;
+      --cream-display: #fff9ef;
+      --line: #b5c8da;
+      --line-subtle: #d1dde8;
+      --line-table: #e3ebf2;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      color-scheme: light;
+      scrollbar-color: var(--blue) var(--paper);
+      scrollbar-width: thin;
+    }
+
+    * { box-sizing: border-box; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      inline-size: 100%;
+      background: var(--paper);
+      color: var(--ink);
+      font: 400 1rem/1.6 "Be Vietnam Pro", sans-serif;
+    }
+
+    ::selection {
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    :where(a, button):focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    .skip-link:where(:not(:focus-within, :active)) {
+      position: absolute !important;
+      clip-path: inset(50%) !important;
+      overflow: hidden !important;
+      inline-size: 1px !important;
+      block-size: 1px !important;
+      margin: -1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    .skip-link:focus-visible {
+      position: fixed;
+      inset-block-start: 0.75rem;
+      inset-inline-start: 0.75rem;
+      z-index: 50;
+      padding: 0.65rem 1.1rem;
+      border-radius: 0.45rem;
+      background: var(--paper);
+      color: var(--ink-dark);
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0.5rem 1.5rem rgba(7, 29, 49, 0.35);
+    }
+
+    h1, h2, p, figure, dl, dt, dd { margin: 0; }
+
+    /* Hero Stage: proportional to 1376x768 approved comp */
+    .hero-stage {
+      position: relative;
+      inline-size: 100%;
+      block-size: 41.28vw;
+      min-block-size: 32rem;
+      background: var(--navy-deep);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .campus-plate {
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline: 0;
+      block-size: 79.23%;
+    }
+
+    .campus-plate img {
+      display: block;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-scrim {
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline: 0;
+      block-size: 56%;
+      background: linear-gradient(
+        to bottom,
+        rgba(7, 29, 49, 0) 0%,
+        rgba(7, 29, 49, 0.72) 24%,
+        rgba(7, 29, 49, 0.94) 46%,
+        #071d31 62%,
+        #071d31 100%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 1.25rem 1.5rem 2.2rem;
+      color: var(--cream-display);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.48vw, 1.4rem);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ice);
+      letter-spacing: 0;
+      margin-block-end: 0.2rem;
+    }
+
+    .hero-name {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.5rem, 5.5vw, 5.25rem);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      color: var(--cream-display);
+    }
+
+    .hero-degree {
+      font-size: clamp(0.98rem, 1.65vw, 1.55rem);
+      font-weight: 400;
+      line-height: 1.32;
+      color: var(--ice);
+      margin-block-start: 0.35rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem 0.7rem;
+      margin-block-start: 1rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hero-date-line {
+      font-size: clamp(0.94rem, 1.36vw, 1.24rem);
+      line-height: 1.32;
+      color: #f2f6f7;
+    }
+
+    .cta-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      min-block-size: 3rem;
+      padding: 0.65rem 1.15rem;
+      border-radius: 999px;
+      background: var(--ice-pill);
+      color: var(--ink-dark);
+      font-size: clamp(0.92rem, 1.06vw, 0.96rem);
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 1.2;
+      transition: background-color 220ms var(--ease-out), transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out);
+    }
+
+    .cta-pill:hover {
+      background: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 0.45rem 1.25rem rgba(3, 11, 20, 0.32);
+    }
+
+    .cta-pill:active {
+      transform: translateY(0);
+    }
+
+    .cta-pill:focus-visible {
+      outline: 3px solid var(--ice);
+      outline-offset: 3px;
+    }
+
+    .cta-pill svg,
+    .btn-primary svg {
+      inline-size: 1.15em;
+      block-size: 1.15em;
+      flex: none;
+    }
+
+    /* Two-column Time & Place Folio Band */
+    .folio-band {
+      background: var(--paper);
+      border-block-end: 1px solid var(--line-subtle);
+    }
+
+    .folio-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      max-inline-size: 92rem;
+      margin-inline: auto;
+      padding: 2.35rem clamp(1.25rem, 2vw, 2rem) 1.6rem;
+      gap: 1.5rem 0;
+    }
+
+    .folio-col {
+      text-align: center;
+      padding-inline: clamp(0.75rem, 2vw, 1.75rem);
+    }
+
+    .folio-col + .folio-col {
+      border-inline-start: 1px solid var(--line);
+    }
+
+    .folio-col h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.22rem, 1.98vw, 1.85rem);
+      line-height: 1.24;
+      letter-spacing: -0.015em;
+      color: var(--ink-dark);
+      font-variant-numeric: tabular-nums;
+      margin-block-end: 0.45rem;
+    }
+
+    .folio-col p {
+      font-size: clamp(0.95rem, 1.3vw, 1.16rem);
+      line-height: 1.42;
+      letter-spacing: 0;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink-dark);
+      max-inline-size: 48ch;
+      margin-inline: auto;
+    }
+
+    .folio-break {
+      display: block;
+    }
+
+    /* Full-width Embedded Map & Directions Bar */
+    .map-section {
+      background: transparent;
+      border-block-end: 1px solid var(--line-subtle);
+    }
+
+    .map-frame {
+      display: block;
+      inline-size: 100%;
+      block-size: clamp(19rem, 36vw, 27rem);
+      border: 0;
+      background: #e2eef7;
+    }
+
+    .map-bar-wrap {
+      background: var(--paper-tint);
+    }
+
+    .map-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem 2rem;
+      max-inline-size: 86rem;
+      margin-inline: auto;
+      padding: 1.35rem clamp(1.25rem, 4vw, 3.5rem);
+    }
+
+    .map-address strong {
+      display: block;
+      font-weight: 600;
+      color: var(--ink-dark);
+    }
+
+    .map-address span {
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-block-size: 44px;
+      padding: 0.72rem 1.35rem;
+      border-radius: 0.5rem;
+      background: var(--blue);
+      color: #ffffff;
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 1.2;
+      transition: background-color 220ms var(--ease-out), transform 220ms var(--ease-out);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    /* Invitation Note & Ceremony Ledger */
+    .details-section {
+      background: var(--paper);
+      padding-block: clamp(2.5rem, 5vw, 4.25rem);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+      gap: 2rem clamp(2rem, 5vw, 4.5rem);
+      align-items: start;
+      max-inline-size: 86rem;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 3.5rem);
+    }
+
+    .details-lead h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.5rem, 2.5vw, 2.15rem);
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      color: var(--ink-dark);
+      margin-block-end: 0.75rem;
+    }
+
+    .details-lead p {
+      color: var(--ink);
+      max-inline-size: 42ch;
+      font-size: 1.04rem;
+      line-height: 1.65;
+    }
+
+    .countdown-block {
+      margin-block-start: 1.4rem;
+      padding-block-start: 1.1rem;
+      border-block-start: 1px solid var(--line-subtle);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .countdown-block .countdown-label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ink-muted);
+      margin-block-end: 0.3rem;
+    }
+
+    .countdown-block .countdown-value {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.2rem, 1.8vw, 1.52rem);
+      line-height: 1.35;
+      color: var(--blue);
+      max-inline-size: none;
+    }
+
+    .ledger {
+      border-block-start: 1px solid var(--line-subtle);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ledger-row {
+      display: grid;
+      grid-template-columns: minmax(9.5rem, 13.5rem) minmax(0, 1fr);
+      gap: 0.35rem 1.5rem;
+      padding-block: 0.95rem;
+      border-block-end: 1px solid var(--line-table);
+    }
+
+    .ledger-row dt {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+    }
+
+    .ledger-row dd {
+      color: var(--ink-dark);
+      font-weight: 400;
+    }
+
+    .ledger-row dd strong {
+      font-weight: 600;
+    }
+
+    /* Closing Deep-Navy Contact Footer */
+    .contact-footer {
+      background: var(--navy-deep);
+      color: var(--cream-display);
+      padding-block: clamp(2.5rem, 5vw, 3.75rem) 1.75rem;
+    }
+
+    .contact-inner {
+      max-inline-size: 86rem;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 3.5rem);
+    }
+
+    .contact-main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem 2.5rem;
+      padding-block-end: clamp(2rem, 4vw, 2.75rem);
+      border-block-end: 1px solid var(--navy-border);
+    }
+
+    .contact-copy h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.45rem, 2.3vw, 2rem);
+      line-height: 1.24;
+      color: var(--cream-display);
+      margin-block-end: 0.4rem;
+    }
+
+    .contact-copy p {
+      color: var(--ice);
+      max-inline-size: 48ch;
+      font-size: 0.98rem;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.85rem 1.25rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .zalo-number {
+      font-size: 1.12rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--cream-display);
+    }
+
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem 1.5rem;
+      padding-block-start: 1.25rem;
+      font-size: 0.84rem;
+      color: var(--ice);
+    }
+
+    .footer-meta a {
+      color: var(--ice);
+      text-underline-offset: 0.2em;
+    }
+
+    .footer-meta a:hover {
+      color: #ffffff;
+    }
+
+    .footer-meta a:focus-visible {
+      outline: 3px solid var(--ice);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 56rem) {
+      .hero-stage {
+        block-size: auto;
+        min-block-size: 0;
+        padding-block-start: clamp(12.5rem, 48vw, 18rem);
+      }
+
+      .campus-plate {
+        block-size: clamp(14.5rem, 56vw, 21rem);
+      }
+
+      .hero-scrim {
+        block-size: auto;
+        inset-block-start: clamp(7.25rem, 28vw, 11.5rem);
+        background: linear-gradient(
+          to bottom,
+          rgba(7, 29, 49, 0) 0%,
+          rgba(7, 29, 49, 0.88) 22%,
+          #071d31 38%,
+          #071d31 100%
+        );
+      }
+
+      .hero-content {
+        padding: 1.25rem 1.25rem 2rem;
+      }
+
+      .folio-grid {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1.65rem 1.25rem;
+        gap: 1.35rem;
+      }
+
+      .folio-col {
+        padding-inline: 0.25rem;
+      }
+
+      .folio-col + .folio-col {
+        border-inline-start: 0;
+        border-block-start: 1px solid var(--line);
+        padding-block-start: 1.35rem;
+      }
+
+      .folio-break {
+        display: none;
+      }
+
+      .details-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .ledger-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.2rem;
+      }
+    }
+
+    @media (pointer: coarse) {
+      .cta-pill,
+      .btn-primary {
+        min-block-size: 48px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta-pill,
+      .btn-primary {
+        transition: none;
+      }
+      .cta-pill:hover,
+      .btn-primary:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Ảnh nền: Trường Đại học Bách khoa vào Xuân, SushiKirin / Wikimedia Commons.
+       https://commons.wikimedia.org/wiki/File:Trường_Đại_học_Bách_khoa_vào_Xuân.jpg
+       CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/ . -->
+  <a class="skip-link" href="#main-content">Chuyển đến nội dung chính</a>
+
+  <header class="hero-stage">
+    <figure class="campus-plate">
+      <img src="assets/plates/campus-hero.png" width="2064" height="675" fetchpriority="high" alt="Mặt tiền Trường Đại học Bách khoa ĐHQG TP.HCM vào Xuân">
+    </figure>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Thiệp mời lễ tốt nghiệp</p>
+      <h1 class="hero-name">Trần Thế Nhân</h1>
+      <p class="hero-degree">Cử nhân Khoa học Máy tính · Niên khóa 2022</p>
+      <div class="hero-actions">
+        <p class="hero-date-line"><time datetime="2026-11-28">Thứ Bảy, 28/11/2026</time></p>
+        <a class="cta-pill" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Ch%E1%BB%A5p%20%E1%BA%A3nh%20t%E1%BB%91t%20nghi%E1%BB%87p%20c%C3%B9ng%20Tr%E1%BA%A7n%20Th%E1%BA%BF%20Nh%C3%A2n&amp;dates=20261128T050000Z/20261128T070000Z&amp;ctz=Asia%2FHo_Chi_Minh&amp;location=%C4%90%E1%BA%A1i%20h%E1%BB%8Dc%20B%C3%A1ch%20khoa%20%C4%90HQG%20TP.HCM%2C%20268%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20TP.HCM&amp;details=H%E1%BA%B9n%20b%E1%BA%A1n%20l%C3%BAc%2012%3A00%20%C4%91%E1%BB%83%20ch%E1%BB%A5p%20%E1%BA%A3nh%20c%C3%B9ng%20Nh%C3%A2n.%20%C4%90%E1%BA%BFn%20tr%C6%B0%E1%BB%9Dng%20li%C3%AAn%20h%E1%BB%87%20Nh%C3%A2n%20qua%20Zalo%200787919942.">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/>
+            <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2H3V7z" fill="currentColor"/>
+            <line x1="16" y1="2.5" x2="16" y2="5"/>
+            <line x1="8" y1="2.5" x2="8" y2="5"/>
+          </svg>
+          <span>Lưu vào Google Calendar</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="folio-band" aria-label="Thời gian và địa điểm">
+      <div class="folio-grid">
+        <div class="folio-col">
+          <h2>Thời gian &amp; Lịch hẹn (12:00–14:00)</h2>
+          <p>Thứ Bảy, 28/11/2026 · Đón khách &amp; chụp ảnh kỷ niệm<span class="folio-break" aria-hidden="true"></span> tại khuôn viên trường</p>
+        </div>
+        <div class="folio-col">
+          <h2>Địa điểm · 268 Lý Thường Kiệt, TP.HCM</h2>
+          <p>Trường Đại học Bách khoa ĐHQG TP.HCM ·<span class="folio-break" aria-hidden="true"></span> Phường Diên Hồng (Quận 10 cũ)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section" aria-label="Bản đồ và chỉ đường đến trường">
+      <iframe class="map-frame" title="Bản đồ Đại học Bách khoa, cơ sở 268 Lý Thường Kiệt" referrerpolicy="strict-origin-when-cross-origin"
+        src="https://www.google.com/maps?q=%C4%90%E1%BA%A1i%20h%E1%BB%8Dc%20B%C3%A1ch%20khoa%20%C4%90HQG%20TP.HCM%2C%20268%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20TP.HCM&amp;z=16&amp;hl=vi&amp;output=embed" allowfullscreen></iframe>
+      <div class="map-bar-wrap">
+        <div class="map-bar">
+          <div class="map-address">
+            <strong>Đại học Bách khoa ĐHQG TP.HCM</strong>
+            <span>268 Lý Thường Kiệt, phường Diên Hồng (quận 10 cũ), TP.HCM</span>
+          </div>
+          <a class="btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=%C4%90%E1%BA%A1i%20h%E1%BB%8Dc%20B%C3%A1ch%20khoa%20%C4%90HQG%20TP.HCM%2C%20268%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20TP.HCM">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Chỉ đường đến trường</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-section" aria-label="Thông tin buổi lễ">
+      <div class="details-grid">
+        <div class="details-lead">
+          <h2>Hẹn bạn lúc 12:00 để chụp ảnh</h2>
+          <p>Trân trọng mời bạn đến chung vui cùng Nhân trong ngày tốt nghiệp. Mọi thông tin giờ hẹn và địa điểm được tóm tắt ở đây để bạn tiện sắp xếp.</p>
+          <div class="countdown-block">
+            <p class="countdown-label" id="countdown-label">Đếm ngược đến 12:00 ngày 28/11/2026</p>
+            <p class="countdown-value"><time id="countdown-value" datetime="2026-11-28T12:00:00+07:00">Thứ Bảy, 28/11/2026 · 12:00 (giờ TP.HCM)</time></p>
+          </div>
+        </div>
+        <dl class="ledger">
+          <div class="ledger-row">
+            <dt>Ngày tổ chức</dt>
+            <dd><strong>Thứ Bảy, 28/11/2026</strong></dd>
+          </div>
+          <div class="ledger-row">
+            <dt>Giờ có mặt chụp ảnh</dt>
+            <dd><strong>12:00</strong> (khung giờ đón khách 12:00–14:00, giờ TP.HCM)</dd>
+          </div>
+          <div class="ledger-row">
+            <dt>Hướng dẫn gặp mặt</dt>
+            <dd><strong>Đến trường liên hệ Nhân qua Zalo 0787919942</strong></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-footer">
+    <div class="contact-inner">
+      <div class="contact-main">
+        <div class="contact-copy">
+          <h2>Đến trường liên hệ Nhân qua Zalo</h2>
+          <p>Khi đến cơ sở 268 Lý Thường Kiệt, bạn nhắn Zalo để Nhân ra đón và chụp ảnh cùng nhé.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="cta-pill" href="https://zalo.me/0787919942">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>Nhắn Nhân qua Zalo</span>
+          </a>
+          <span class="zalo-number">0787919942</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>Thiệp mời lễ tốt nghiệp · Trần Thế Nhân</span>
+        <span>Ảnh nền: <a href="https://commons.wikimedia.org/wiki/File:Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_B%C3%A1ch_khoa_v%C3%A0o_Xu%C3%A2n.jpg">Tòa nhà Bách khoa vào Xuân</a> · SushiKirin (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>)</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const labelEl = document.getElementById('countdown-label');
+      const valueEl = document.getElementById('countdown-value');
+      if (!labelEl || !valueEl) return;
+
+      const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const tz = 'Asia/Ho_Chi_Minh';
+      const eventDateStr = '2026-11-28';
+      const startTimeStr = '12:00:00';
+      const endTimeStr = '14:00:00';
+      const durationFormatter = typeof Intl.DurationFormat === 'function'
+        ? new Intl.DurationFormat('vi-VN', { style: 'long' })
+        : null;
+
+      const formatFallbackDuration = (parts, includeSeconds) => {
+        const units = [];
+        if (parts.days > 0) units.push(`${parts.days} ngày`);
+        if (parts.hours > 0 || units.length > 0) units.push(`${parts.hours} giờ`);
+        if (parts.minutes > 0 || units.length > 0) units.push(`${parts.minutes} phút`);
+        if (includeSeconds) units.push(`${parts.seconds} giây`);
+        return units.join(', ');
+      };
+
+      const computeState = (reduced) => {
+        if (typeof Temporal !== 'undefined') {
+          const eventDate = Temporal.PlainDate.from(eventDateStr);
+          const start = eventDate.toPlainDateTime(startTimeStr).toZonedDateTime(tz, { disambiguation: 'compatible' });
+          const end = eventDate.toPlainDateTime(endTimeStr).toZonedDateTime(tz, { disambiguation: 'compatible' });
+          const now = Temporal.Now.zonedDateTimeISO(tz);
+
+          if (Temporal.ZonedDateTime.compare(now, start) < 0) {
+            const toStart = now.until(start, {
+              largestUnit: 'day',
+              smallestUnit: reduced ? 'minute' : 'second',
+              roundingMode: 'trunc'
+            });
+            const text = toStart.sign === 0
+              ? 'Còn dưới 1 phút'
+              : (durationFormatter ? durationFormatter.format(toStart) : formatFallbackDuration(toStart, !reduced));
+            return { active: true, label: 'Đếm ngược đến 12:00 ngày 28/11/2026', datetime: toStart.toString(), text };
+          }
+          if (Temporal.ZonedDateTime.compare(now, end) < 0) {
+            return { active: true, label: 'Buổi chụp ảnh đang diễn ra (12:00–14:00)', datetime: '2026-11-28T12:00:00+07:00', text: 'Đến trường liên hệ Nhân qua Zalo 0787919942' };
+          }
+          return { active: false, label: 'Lễ tốt nghiệp ngày 28/11/2026', datetime: '2026-11-28T14:00:00+07:00', text: 'Buổi hẹn chụp ảnh đã kết thúc' };
+        }
+
+        const nowMs = Date.now();
+        const startMs = Date.parse('2026-11-28T12:00:00+07:00');
+        const endMs = Date.parse('2026-11-28T14:00:00+07:00');
+        if (nowMs < startMs) {
+          const totalSeconds = Math.floor((startMs - nowMs) / 1000);
+          const parts = {
+            days: Math.floor(totalSeconds / 86400),
+            hours: Math.floor((totalSeconds % 86400) / 3600),
+            minutes: Math.floor((totalSeconds % 3600) / 60),
+            seconds: totalSeconds % 60
+          };
+          const text = (reduced && totalSeconds < 60)
+            ? 'Còn dưới 1 phút'
+            : formatFallbackDuration(parts, !reduced);
+          return { active: true, label: 'Đếm ngược đến 12:00 ngày 28/11/2026', datetime: `P${parts.days}DT${parts.hours}H${parts.minutes}M${parts.seconds}S`, text };
+        }
+        if (nowMs < endMs) {
+          return { active: true, label: 'Buổi chụp ảnh đang diễn ra (12:00–14:00)', datetime: '2026-11-28T12:00:00+07:00', text: 'Đến trường liên hệ Nhân qua Zalo 0787919942' };
+        }
+        return { active: false, label: 'Lễ tốt nghiệp ngày 28/11/2026', datetime: '2026-11-28T14:00:00+07:00', text: 'Buổi hẹn chụp ảnh đã kết thúc' };
+      };
+
+      const render = () => {
+        const state = computeState(motionQuery.matches);
+        labelEl.textContent = state.label;
+        valueEl.setAttribute('datetime', state.datetime);
+        valueEl.textContent = state.text;
+        return state.active;
+      };
+
+      let timerId = null;
+      const schedule = () => {
+        if (timerId !== null) clearInterval(timerId);
+        if (!render()) return;
+        const intervalMs = motionQuery.matches ? 60000 : 1000;
+        timerId = setInterval(() => {
+          if (!render()) {
+            clearInterval(timerId);
+            timerId = null;
+          }
+        }, intervalMs);
+      };
+
+      schedule();
+      motionQuery.addEventListener('change', schedule);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) schedule();
+      });
+
+      if (typeof Temporal === 'undefined') {
+        import('https://esm.sh/temporal-polyfill')
+          .then((mod) => {
+            if (mod?.Temporal) {
+              globalThis.Temporal = mod.Temporal;
+              schedule();
+            }
+          })
+          .catch(() => {});
+      }
+    })();
+  </script>
+</body>
+</html>
